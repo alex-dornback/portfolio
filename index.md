@@ -15,4 +15,4 @@ Robotics · Prosthetics · Control
 
 ## Contact
 - GitHub: https://github.com/yourusername
-- LinkedIn: https://linkedin.com/in/yourname
+- LinkedIn: https://linkedin.com/in/yourname 

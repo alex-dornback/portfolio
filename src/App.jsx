@@ -80,7 +80,7 @@ function App() {
         id: 'proj-1',
         name: 'A novel drone-based system for building maintenance and inspection',
         tech: 'SolidWorks, Python, ROS, Computer Vision',
-        image: '/projects/drone-drill.png', // Replace with your actual image path
+        image: '/portfolio/projects/drone-drill.png', // Replace with your actual image path
         sections: {
           overview: 'Designing and building a tethered drone-based system for building maintenance. Fitting a modular toolhead for autonomous drilling and facade cleaning.',
           assembly: 'Custom flight controller integrated with ROS navigation system. Vacuum-mounted drone with a modular toolhead for swapping between cleaning and drill modes. Shrouded bit for minimal cleanup. Tethered power for continuous transmission.',
@@ -93,7 +93,7 @@ function App() {
         id: 'proj-2',
         name: 'A low-cost polar 3D printer for multi-material printing',
         tech: 'SolidWorks, Python, 3D Printing',
-        image: '/projects/polar3didex.png', // Replace with your actual image path
+        image: '/portfolio/projects/polar3didex.png', // Replace with your actual image path
         sections: {
           overview: 'Designing and building a polar 3D printer for multi-material applications with simultaneous multi-nozzle extrusion to reduce waste generation.',
           assembly: 'Polar coordinate 3D printer with rotating bed and cartesian extruder movement. >2 simultaneously active hotends with automatic filament switching mechanism. Integrated slicer for complex geometries.',
@@ -107,7 +107,7 @@ function App() {
         id: 'proj-3',
         name: 'FIDO: an open-source and trainable 3D-printed robotic quadruped',
         tech: 'SolidWorks, Python, 3D Printing, RL',
-        image: '/projects/IMG_7425 (2).JPG', // Replace with your actual image path
+        image: '/portfolio/projects/IMG_7425 (2).JPG', // Replace with your actual image path
         sections: {
           overview: 'Designed and built a 3D-printed robot dog for education and research. Used reinforcement learning and proximal policy optimization for gait generation.',
           assembly: 'Fully 3D-printed chassis with  8 LX-16A serial bus servo motors. Custom control circuit using Raspberry Pi for on-board computation. Modular quasi-direct drive leg design for easy replacement with passive tension.',
@@ -122,7 +122,7 @@ function App() {
         tech: 'SolidWorks, 3D Printing, C++, Python',
         media: {
           type: 'video',
-          src: '/projects/IMG_5905.mp4'
+          src: '/portfolio/projects/IMG_5905.mp4'
         },
         sections: {
           overview: 'Led new product development of a mechanical IR intubation robot for difficult airway scenarios. Designed for rapid deployment in emergency settings.',
@@ -136,7 +136,7 @@ function App() {
         id: 'proj-5',
         name: 'Development of a single-modal, multifunctional biosensor for real-time monitoring of tissue health',
         tech: 'Python, 3D Printing, CAD, Electronics',
-        image: '/projects/biosensor.png', // Replace with your actual image path
+        image: '/portfolio/projects/biosensor.png', // Replace with your actual image path
         sections: {
           overview: 'Designed a single-modal,multifunctional capacitive sensor for real-time monitoring of muscular strength and tissue health.',
           assembly: 'Designed capacitive yarn sensors with silicone-molded flex casing. Arduino and Python-based data acquisition system with eventual wireless connectivity.',
@@ -150,7 +150,7 @@ function App() {
         id: 'proj-6',
         name: 'Fluid Mechanic Analysis of Realistic Coronary Arteries',
         tech: 'LabVIEW, Python, 3D Printing, CFD',
-        image: '/projects/kranthi-flowloop.png', // Replace with your actual image path
+        image: '/portfolio/projects/kranthi-flowloop.png', // Replace with your actual image path
         sections: {
           overview: 'Developed a novel method to assess fluid mechanic properties of 3D-printed coronary arteries. Validated against physiological flow patterns, ischemic coronary artery disesase identification, and CFD simulation.',
           assembly: 'Constructed benchtop flow loop to collect proximal and distal pressure changes over varying downstream microcirculatory resistances and flow rates. Tested 65 patient-specific coronary models to assess coronary heart health against CFD benchmarks.',
@@ -164,7 +164,7 @@ function App() {
         id: 'proj-7',
         name: '3D-Printed Coronary Arteries with Realistic Tissue-Mimicking Biomechanics',
         tech: 'LabVIEW, Python, 3D Printing, CFD',
-        image: '/projects/kranthi-credence.png', // Replace with your actual image path
+        image: '/portfolio/projects/kranthi-credence.png', // Replace with your actual image path
         sections: {
           overview: 'Developed a novel method to 3D print and test fluid mechanic properties of realistic coronary arteries. Validated geometry reconstruction with Micro-CT.',
           assembly: 'Developed extraction policy to convert CT images to STL meshes with 100% accuracy through MEDIS, Geomagic, and Solidworks. Multi-material 3D printing of 65 coronary arteries with Stratasys PolyJet resins. Fitted models with barbs, pressure taps, and fiducial markings.',
@@ -500,11 +500,11 @@ function App() {
                     {/* Alternating Layout: Even indices = image left, Odd indices = image right */}
                     <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6`}>
                       {/* Media Section (Image or Video) */}
-                      <div className="md:w-1/2">
+                      <div className="md:w-1/2 justify-center flex items-center">
                         {project.media && project.media.type === 'video' ? (
                           <video 
                             src={project.media.src}
-                            className="w-full h-auto md:h-full object-contain rounded-lg"
+                            className="w-full max-h-[500px] object-contain rounded-lg"
                             autoPlay
                             loop
                             muted
